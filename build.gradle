@@ -24,15 +24,20 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
+	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.springframework.data:spring-data-jpa:3.2.0'
+	implementation 'org.hibernate:hibernate-core:6.2.2.Final'
+	implementation 'jakarta.persistence:jakarta.persistence-api:3.2.0'
+	implementation 'io.swagger.core.v3:swagger-annotations:2.2.28'
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()
